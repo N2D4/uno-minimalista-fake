@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Martel+Sans:200,300,400,600,700,800,900|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap');
+
+* {
+    transition: 0.5s all;
+}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 14px;
+}
+
+.red {
+    --this-col: rgb(252, 25, 4);
+}
+
+.green {
+    --this-col: rgb(104, 202, 59);
+}
+
+.blue {
+    --this-col: rgb(37, 97, 214);
+}
+
+.yellow {
+    --this-col: rgb(239, 204, 0);
+}
+
+.black {
+    --this-col: black;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    margin: 14mm;
+    width: 62mm;
+    height: 88mm;
+    border-radius: 10px;
+    background-color: var(--this-col);
+}
+
+.card:hover {
+    transform: rotate(180deg);
+    transition: 5s transform linear;
+}
+
+.dispcard {
+    position: absolute;
+    width: 11mm;
+    height: 17.6mm;
+    border: 1mm solid white;
+    border-radius: 3mm;
+    box-shadow: 0 0 0 6px var(--this-col);
+    background-color: var(--this-col);
+}
+
+.dispcard.two:nth-child(1) {
+    transform: translate(-50%, -50%) translate(35%, -35%);
+}
+
+.dispcard.two:nth-child(2) {
+    transform: translate(-50%, -50%) translate(-35%, 35%);
+}
+
+.ul::after {
+    content: '';
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+    transform: translate(0%, -150%);
+    background-color: white;
+}
+
+.e .ul::after {
+    height: 2px;
+}
+
+.mid .ul::after {
+    height: 6px;
+}
+
+.e {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-weight: 300;
+    font-size: 31px;
+}
+
+.e.br {
+    transform: rotate(180deg);
+    transform-origin: 31mm 44mm;
+}
+
+.e > div {
+    position: absolute;
+    top: 4mm;
+    left: 5mm;
+}
+
+.mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 300;
+    font-size: 112px;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+}
+
+.diag {
+    display: none;
+    position: absolute;
+    height: 4px;
+    background-color: red;
+    top: 50%;
+    width: 200%;
+    transform: translate(-25%, -50%) rotate(54.8335639642deg);
+}
+
+
