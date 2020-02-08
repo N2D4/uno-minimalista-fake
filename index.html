@@ -11,11 +11,35 @@
         <defs>
             <g id="tarr">
                 <path d="M 10 51 L 10 42 A 12 12 0 0 1 22 30 L 85 30" stroke="white" stroke-linecap="round" fill="none" />
-                <path d="M 90 30 l -20 -20 M 90 30 l -20 20" stroke="white" stroke-linecap="round" fill="none" />
+                <path d="M 90 30 l -20 -20 M 90 30 l -20 2un0" stroke="white" stroke-linecap="round" fill="none" />
             </g>
         </defs>
     </svg>
 
+
+    <div>
+        <script>
+            function ccol(str) {
+                document.getElementById('twrap').classList.remove('red', 'green', 'blue', 'yellow', 'black');
+                document.getElementById('twrap').classList.add(str);
+            }
+        </script>
+        <button onclick="ccol('red')">Red</button>
+        <button onclick="ccol('green')">Green</button>
+        <button onclick="ccol('blue')">Blue</button>
+        <button onclick="ccol('yellow')">Yellow</button>
+        <button onclick="ccol('black')">Black</button>
+        <input id="numin" type="number" onchange="void(document.getElementById('twrap').innerHTML = '') || document.getElementById('twrap').appendChild(document.getElementsByClassName('card')[document.getElementById('numin').value].cloneNode(true))">
+        <br>
+        <style>
+            #twrap > .card {
+                margin: 3px;
+            }
+        </style>
+        <div id="twrap" class="black" style="background-color: white; display: inline-block;">
+            click a button
+        </div>
+    </div>
 
     
 

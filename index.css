@@ -4,7 +4,7 @@
 
 
 * {
-    transition: 0.5s all;
+    /*transition: 0.5s all;*/
 }
 
 body {
@@ -43,13 +43,17 @@ body {
     display: inline-block;
     position: relative;
     margin: 14mm;
-    width: 62mm;
-    height: 88mm;
+    width: 2.25in;
+    height: 3.3795180723in;
     border-radius: 10px;
     background-color: var(--this-col);
 }
 
-.card:hover {
+#twrap > .card {
+    border-radius: 0px;
+}
+
+:not(#twrap) > .card:hover {
     transform: rotate(180deg);
     transition: 5s transform linear;
 }
@@ -116,13 +120,13 @@ body {
 .tarrow {
     position: relative;
     width: 90px;
-    height: 120px;
+    height: 180px;
 }
 
 .tarrow.thin {
     transform: scale(0.33333333);
     width: 30px;
-    height: 40px;
+    height: 60px;
 }
 
 .tarrow > svg {
@@ -310,13 +314,13 @@ body {
 
 .e.br {
     transform: rotate(180deg);
-    transform-origin: 31mm 44mm;
+    transform-origin: 50% 50%;
 }
 
 .e > div {
     position: absolute;
     top: 4mm;
-    left: 5mm;
+    left: 6mm;
 }
 
 .mid {
