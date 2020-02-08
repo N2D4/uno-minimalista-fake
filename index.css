@@ -10,26 +10,31 @@ body {
     color: white;
     background-color: black;
     font-size: 14px;
+    --red: rgb(252, 25, 4);
+    --green: rgb(104, 202, 59);
+    --blue: rgb(37, 97, 214);
+    --yellow: rgb(239, 204, 0);
+    --black: black;
 }
 
 .red {
-    --this-col: rgb(252, 25, 4);
+    --this-col: var(--red);
 }
 
 .green {
-    --this-col: rgb(104, 202, 59);
+    --this-col: var(--green);
 }
 
 .blue {
-    --this-col: rgb(37, 97, 214);
+    --this-col: var(--blue);
 }
 
 .yellow {
-    --this-col: rgb(239, 204, 0);
+    --this-col: var(--yellow);
 }
 
 .black {
-    --this-col: black;
+    --this-col: var(--black);
 }
 
 .card {
@@ -47,22 +52,209 @@ body {
     transition: 5s transform linear;
 }
 
+.forbidden {
+    position: relative;
+    padding-bottom: 100%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+}
+
+.forbidden::before {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1.5mm solid white;
+    border-radius: 100%;
+}
+
+.forbidden::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1.25mm;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(-45deg);
+    background-color: white;
+}
+
+.forbidden.thin::before {
+    border-width: 0.7mm;
+}
+
+.forbidden.thin::after {
+    height: 0.7mm;
+}
+
+.tarrow {
+    position: relative;
+    width: 90px;
+    height: 120px;
+}
+
+.tarrow.thin {
+    transform: scale(0.33333333);
+    width: 30px;
+    height: 40px;
+}
+
+.tarrow > svg {
+    position: absolute;
+    stroke-width: 5px;
+    left: 50%;
+    top: 50%;
+}
+
+.tarrow.thin > svg {
+    stroke-width: 6px;
+}
+
+.tarrow > svg:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(-45deg) translate(5.5mm, -4.5mm);
+}
+
+.tarrow > svg:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(135deg) translate(5.5mm, -4.5mm);
+}
+
 .dispcard {
     position: absolute;
-    width: 11mm;
-    height: 17.6mm;
-    border: 1mm solid white;
+    width: 9.625mm;
+    height: 17.4mm;
+    border: 1.25mm solid white;
     border-radius: 3mm;
     box-shadow: 0 0 0 6px var(--this-col);
     background-color: var(--this-col);
 }
 
 .dispcard.two:nth-child(1) {
-    transform: translate(-50%, -50%) translate(35%, -35%);
+    transform: translate(-50%, -50%) translate(-35%, 35%);
 }
 
 .dispcard.two:nth-child(2) {
-    transform: translate(-50%, -50%) translate(-35%, 35%);
+    transform: translate(-50%, -50%) translate(35%, -35%);
+}
+
+.dispcard.four:nth-child(1) {
+    transform: translate(-50%, -50%) translate(-105%, 45%);
+    border-color: var(--green);
+}
+
+.dispcard.four:nth-child(2) {
+    transform: translate(-50%, -50%) translate(-35%, -25%);
+    border-color: var(--blue);
+}
+
+.dispcard.four:nth-child(3) {
+    transform: translate(-50%, -50%) translate(35%, 25%);
+    border-color: var(--red);
+}
+
+.dispcard.four:nth-child(4) {
+    transform: translate(-50%, -50%) translate(105%, -45%);
+    border-color: var(--yellow);
+}
+
+.colorwheel {
+    position: relative;
+    width: 100px;
+    height: 0px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    padding-bottom: 100%;
+    box-sizing: border-box;
+}
+
+.colorwheel.thin {
+    width: 35px;
+}
+
+.colorwheel > div:not(:nth-child(3)) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 0px;
+    white-space: nowrap;
+}
+
+.colorwheel > div:nth-child(1) {
+    top: 0%;
+    bottom: 50%;
+}
+
+.colorwheel > div:nth-child(2) {
+    top: 50%;
+    bottom: 0%;
+}
+
+.colorwheel > div:not(:nth-child(3))::before, .colorwheel > div:not(:nth-child(3))::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+    top: 0;
+    bottom: 0;
+    border: 1.5mm solid white;
+}
+
+.colorwheel.thin > div:not(:nth-child(3))::before, .colorwheel.thin > div:not(:nth-child(3))::after {
+    border-width: 0.66666mm;
+}
+
+
+.colorwheel > div:nth-child(1)::before {
+    border-color: var(--yellow);
+    left: 0%;
+    right: 50%;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 200px;
+}
+
+.colorwheel > div:nth-child(1)::after {
+    border-color: var(--green);
+    left: 50%;
+    right: 0%;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 200px;
+}
+
+.colorwheel > div:nth-child(2)::before {
+    border-color: var(--blue);
+    left: 0%;
+    right: 50%;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 200px;
+}
+
+.colorwheel > div:nth-child(2)::after {
+    border-color: var(--red);
+    left: 50%;
+    right: 0%;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 200px;
+}
+
+.colorwheel > div:nth-child(3)::before, .colorwheel > div:nth-child(3)::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1mm;
+    background-color: var(--this-col);
+    transform: translate(0%, -50%);
+}
+
+.colorwheel.thin > div:nth-child(3)::before, .colorwheel.thin > div:nth-child(3)::after {
+    height: 0.75mm;
+}
+
+.colorwheel > div:nth-child(3)::after {
+    transform: translate(0%, -50%) rotate(90deg);
 }
 
 .ul::after {
@@ -111,11 +303,10 @@ body {
     vertical-align: middle;
 }
 
-.diag {
-    display: none;
+.showdiags .diag {
     position: absolute;
     height: 4px;
-    background-color: red;
+    background-color: purple;
     top: 50%;
     width: 200%;
     transform: translate(-25%, -50%) rotate(54.8335639642deg);

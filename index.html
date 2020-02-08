@@ -7,6 +7,84 @@
 </head>
 <body class="green" onclick="void (body.classList.remove('red', 'green', 'blue', 'yellow')) || body.classList.add(['red', 'green', 'blue', 'yellow'][Math.floor(Math.random() * 4)])">
 
+    <svg style="display: none;">
+        <defs>
+            <g id="tarr">
+                <path d="M 10 51 L 10 42 A 12 12 0 0 1 22 30 L 85 30" stroke="white" stroke-linecap="round" fill="none" />
+                <path d="M 90 30 l -20 -20 M 90 30 l -20 20" stroke="white" stroke-linecap="round" fill="none" />
+            </g>
+        </defs>
+    </svg>
+
+
+    
+
+    <div class="black" style="background-color: white; display: inline-block;">
+        <div class="card">
+            <div class="e tl"><div>
+                +4
+            </div></div>
+            <div class="e br"><div>
+                +4
+            </div></div>
+            <div class="mid">
+                <div class="dispcard four"></div>
+                <div class="dispcard four"></div>
+                <div class="dispcard four"></div>
+                <div class="dispcard four"></div>
+            </div>
+            <div class="diag"></div>
+        </div>
+
+        <div class="card">
+            <div class="e tl"><div>
+                <div class="colorwheel thin"><div></div><div></div><div></div></div>
+            </div></div>
+            <div class="e br"><div>
+                <div class="colorwheel thin"><div></div><div></div><div></div></div>
+            </div></div>
+            <div class="mid">
+                <div class="colorwheel"><div></div><div></div><div></div></div>
+            </div>
+            <div class="diag"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="e tl"><div>
+            <div class="tarrow thin">
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+            </div>
+        </div></div>
+        <div class="e br"><div>
+            <div class="tarrow thin">
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+            </div>
+        </div></div>
+        <div class="mid">
+            <div class="tarrow">
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+                <svg height="60" width="100"><use xlink:href="#tarr" x="0" y="0" /></svg>
+            </div>
+        </div>
+        <div class="diag"></div>
+    </div>
+
+    <div class="card">
+        <div class="e tl"><div>
+            <div class="forbidden thin" style="width: 26px;"></div>
+        </div></div>
+        <div class="e br"><div>
+            <div class="forbidden thin" style="width: 26px;"></div>
+        </div></div>
+        <div class="mid">
+            <div class="forbidden" style="width: 90px;"></div>
+        </div>
+        <div class="diag"></div>
+    </div>
+
     <div class="card">
         <div class="e tl"><div>
             +2
