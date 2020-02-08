@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Martel+Sans:200,300,400,600,700,800,900|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
 
 * {
     transition: 0.5s all;
@@ -11,9 +13,9 @@ body {
     background-color: black;
     font-size: 14px;
     --red: rgb(252, 25, 4);
-    --green: rgb(104, 202, 59);
-    --blue: rgb(37, 97, 214);
-    --yellow: rgb(239, 204, 0);
+    --green: rgb(24, 202, 9);
+    --blue: rgb(7, 37, 244);
+    --yellow: rgb(239, 214, 0);
     --black: black;
 }
 
@@ -50,6 +52,30 @@ body {
 .card:hover {
     transform: rotate(180deg);
     transition: 5s transform linear;
+}
+
+.unocirc {
+    width: 3cm;
+    height: 2cm;
+    border: 1mm solid red;
+    border-radius: 200%;
+    transform: rotate(-25deg);
+}
+
+.unocirc::after {
+    position: absolute;
+    top: 10%;
+    content: 'UNO';
+    font-family: 'Raleway', sans-serif;
+    text-shadow: -5px -5px var(--this-col), -5px 0px var(--this-col), -5px 5px var(--this-col),
+                  0px -5px var(--this-col),  0px 0px var(--this-col),  0px 5px var(--this-col),
+                  5px -5px var(--this-col),  5px 0px var(--this-col),  5px 5px var(--this-col);
+    width: 100%;
+    height: 100%;
+    transform: rotate(15deg);
+    font-weight: 600;
+    color: orange;
+    font-size: 52px;
 }
 
 .forbidden {
