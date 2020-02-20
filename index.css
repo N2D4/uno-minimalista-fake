@@ -20,7 +20,18 @@ body {
 }
 
 a {
-    color: white;
+    color: inherit;
+}
+
+#markdowninfo {
+    background-color: white;
+    color: black;
+    padding: 1px 10px 1px 10px;
+    margin: 5px;
+}
+
+#markdowninfo h1 {
+    margin-top: 0px;
 }
 
 .red {
