@@ -4,9 +4,13 @@
     <title>Uno Minimalista Fake</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.js"></script>
 </head>
 <body class="green" onclick="void (body.classList.remove('red', 'green', 'blue', 'yellow')) || body.classList.add(['red', 'green', 'blue', 'yellow'][Math.floor(Math.random() * 4)])">
-    <iframe style="background-color: white; width: 100%;" src="README.md"></iframe>
+    <div id="markdowninfo"></div>
+    <script>
+        (async () => document.getElementById('markdowninfo').innerHTML = markdownit().render(await (await fetch('README.md')).text()))();
+    </script>
     
     <svg style="display: none;">
         <defs>

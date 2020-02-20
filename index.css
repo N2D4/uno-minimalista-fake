@@ -19,6 +19,10 @@ body {
     --black: black;
 }
 
+a {
+    color: white;
+}
+
 .red {
     --this-col: var(--red);
 }
