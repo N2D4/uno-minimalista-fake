@@ -9,3 +9,5 @@ An attempt at a fake Uno Minimalista concept art, as designed by Warleson Olivei
 Anyone claiming to sell these is probably scamming you. They're not being sold, not currently at least. (I don't know what Mattel & Oliveira are up to...)
 
 Sorry for the ugly website, my stuff usually looks better ;)
+
+@realChesta did the exact same thing and neither of us knew about the other's until we were both done, so take a look at [his version](https://github.com/realChesta/uno-card-test) :D
