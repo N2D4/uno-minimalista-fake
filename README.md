@@ -1,12 +1,14 @@
 # uno-minimalista-fake
 
+EDIT: Mattel and Oliveira [announced plans](https://gizmodo.com/mattel-turned-this-graphic-designers-minimalist-uno-dec-1841832127) to sell Uno Minimalista, making this project kind of useless. Only buy from official sources because there's still a lot of scams out there
+
+------
+
 An attempt at a fake Uno Minimalista concept art, as designed by Warleson Oliveira, in CSS. I'm not affiliated with Mattel in any way.
 
 [Oliveira's original](https://www.behance.net/gallery/90273937/UNO-Versao-Minimalista)
 
 [Online version of my fake](https://n2d4.github.io/uno-minimalista-fake)
-
-Anyone claiming to sell these is probably scamming you. They're not being sold, not currently at least. (I don't know what Mattel & Oliveira are up to...)
 
 Sorry for the ugly website, my stuff usually looks better ;)
 
