@@ -10,4 +10,4 @@ Anyone claiming to sell these is probably scamming you. They're not being sold, 
 
 Sorry for the ugly website, my stuff usually looks better ;)
 
-@realChesta did the exact same thing and neither of us knew about the other's until we were both done, so take a look at [his version](https://github.com/realChesta/uno-card-test) :D
+[@realChesta](https://github.com/realChesta) did the exact same thing and neither of us knew about the other's until we were both done, so take a look at [his version](https://github.com/realChesta/uno-card-test) :D
